@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="tw.idv.fy.utils.intentchooser">
+
+    <application
+        android:supportsRtl="false"
+        android:allowBackup="false"
+        android:icon="@mipmap/tw_idv_fy_utils_intentchooser_launcher"
+        android:roundIcon="@mipmap/tw_idv_fy_utils_intentchooser_launcher_round"
+        android:label="@string/tw.idv.fy.utils.intentchooser.app"
+        android:theme="@android:style/Theme.NoDisplay"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".IntentChooserActivity"
+            android:label="@string/tw.idv.fy.utils.intentchooser.label">
+        </activity>
+    </application>
+
+</manifest>
