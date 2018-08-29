@@ -1,13 +1,11 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = '1.1.51'
     repositories {
         google()
         jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.4'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -21,8 +19,6 @@ repositories {
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 27
@@ -30,7 +26,9 @@ android {
         minSdkVersion 19
         versionCode 1
         versionName "1.0"
-        //applicationId tw.idv.fy.utils.intentchooser.example
+        applicationId "tw.idv.fy.utils.intentchooser.example"
+        //resValue("string", "MDN.pdf", "https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf")
+        resValue("string", "MDN.pdf", "http://multilingual.mofa.gov.tw/web/web_UTF-8/MOFA/glance2017/English.pdf")
     }
     buildTypes {
         release {
@@ -38,9 +36,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation project(':module')
 }

@@ -12,6 +12,7 @@
         android:theme="@android:style/Theme.NoDisplay"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:exported="true"
             android:name=".IntentChooserActivity"
             android:label="@string/tw.idv.fy.utils.intentchooser.label">
         </activity>
